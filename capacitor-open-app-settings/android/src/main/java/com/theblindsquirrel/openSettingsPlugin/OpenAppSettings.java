@@ -19,7 +19,7 @@ public class OpenAppSettings extends Plugin {
         intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         Uri uri = Uri.fromParts("package", getContext().getPackageName(), null);
         intent.setData(uri);
-//        startActivity(intent);
+        startActivityForResult(call, intent, 1);
 
         JSObject ret = new JSObject();
         call.success(ret);
