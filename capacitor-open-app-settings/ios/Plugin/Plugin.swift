@@ -1,5 +1,6 @@
 import Foundation
 import Capacitor
+import UIKit
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -8,10 +9,9 @@ import Capacitor
 @objc(OpenAppSettings)
 public class OpenAppSettings: CAPPlugin {
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.success([
-            "value": value
-        ])
+    @objc func open(_ call: CAPPluginCall) {
+        let url = URL(string: UIApplication.openSettingsURLString)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        call.success([:])
     }
 }

@@ -9,9 +9,8 @@ export class OpenAppSettingsWeb extends WebPlugin implements OpenAppSettingsPlug
     });
   }
 
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async open(): Promise<void> {
+    return;
   }
 }
 

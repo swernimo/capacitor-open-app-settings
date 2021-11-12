@@ -5,5 +5,5 @@ declare module '@capacitor/core' {
 }
 
 export interface OpenAppSettingsPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  open(): Promise<void>;
 }
