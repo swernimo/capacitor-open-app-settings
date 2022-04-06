@@ -22,9 +22,10 @@ public class OpenAppSettings: CAPPlugin {
         if #available(iOS 13.4, *) {
             let instance = CXCallDirectoryManager.sharedInstance
             DispatchQueue.main.async {
-                instance.openSettings()
+                instance.openSettings(completionHandler: { (error) in
+                    call.success([:])
+                })
             }
-            call.success([:])
         } else {
             let url = URL(string: UIApplication.openSettingsURLString)
             DispatchQueue.main.async {
