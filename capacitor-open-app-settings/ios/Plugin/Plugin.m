@@ -5,4 +5,5 @@
 // each method the plugin supports using the CAP_PLUGIN_METHOD macro.
 CAP_PLUGIN(OpenAppSettings, "OpenAppSettings",
            CAP_PLUGIN_METHOD(open, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(openCallerIdSettings, CAPPluginReturnPromise);
 )

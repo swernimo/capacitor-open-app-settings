@@ -24,4 +24,16 @@ public class OpenAppSettings extends Plugin {
         JSObject ret = new JSObject();
         call.success(ret);
     }
+
+    @PluginMethod
+    public void openCallerIdSettings(PluginCall call) {
+        Intent intent = new Intent();
+        intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        Uri uri = Uri.fromParts("package", getContext().getPackageName(), null);
+        intent.setData(uri);
+        startActivityForResult(call, intent, 1);
+
+        JSObject ret = new JSObject();
+        call.success(ret);
+    }
 }
