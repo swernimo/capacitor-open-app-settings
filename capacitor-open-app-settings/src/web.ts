@@ -12,6 +12,10 @@ export class OpenAppSettingsWeb extends WebPlugin implements OpenAppSettingsPlug
   async open(): Promise<void> {
     return;
   }
+
+  async openCallerIdSettings(): Promise<void> {
+    return;
+  }
 }
 
 const OpenAppSettings = new OpenAppSettingsWeb();

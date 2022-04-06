@@ -6,4 +6,5 @@ declare module '@capacitor/core' {
 
 export interface OpenAppSettingsPlugin {
   open(): Promise<void>;
+  openCallerIdSettings(): Promise<void>;
 }
