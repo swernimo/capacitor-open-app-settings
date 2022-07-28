@@ -13,7 +13,7 @@ public class openappsettingsPlugin: CAPPlugin {
         call.resolve(implementation.open())
     }
 
-    @objc func openCallerIdSettings_ call: CAPPluginCall) {
+    @objc func openCallerIdSettings(_ call: CAPPluginCall) {
         call.resolve(implementation.openCallerIdSettings())
     }
 }
