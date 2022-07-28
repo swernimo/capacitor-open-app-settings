@@ -12,11 +12,16 @@ public class openappsettingsPlugin extends Plugin {
     private openappsettings implementation = new openappsettings();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
+    public void open(PluginCall call) {
         JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
+        ret.put("value", implementation.open());
+        call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void openCallerIdSettings(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("value", implementation.openCallerIdSettings());
         call.resolve(ret);
     }
 }
