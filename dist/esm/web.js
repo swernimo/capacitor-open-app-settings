@@ -1,8 +1,10 @@
 import { WebPlugin } from '@capacitor/core';
 export class openappsettingsWeb extends WebPlugin {
-    async echo(options) {
-        console.log('ECHO', options);
-        return options;
+    async open() {
+        return;
+    }
+    async openCallerIdSettings() {
+        return;
     }
 }
 //# sourceMappingURL=web.js.map

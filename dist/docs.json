@@ -6,20 +6,24 @@
     "tags": [],
     "methods": [
       {
-        "name": "echo",
-        "signature": "(options: { value: string; }) => Promise<{ value: string; }>",
-        "parameters": [
-          {
-            "name": "options",
-            "docs": "",
-            "type": "{ value: string; }"
-          }
-        ],
-        "returns": "Promise<{ value: string; }>",
+        "name": "open",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
         "tags": [],
         "docs": "",
         "complexTypes": [],
-        "slug": "echo"
+        "slug": "open"
+      },
+      {
+        "name": "openCallerIdSettings",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "opencalleridsettings"
       }
     ],
     "properties": []

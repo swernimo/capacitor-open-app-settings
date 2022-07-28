@@ -9,9 +9,11 @@ const openappsettings = core.registerPlugin('openappsettings', {
 });
 
 class openappsettingsWeb extends core.WebPlugin {
-    async echo(options) {
-        console.log('ECHO', options);
-        return options;
+    async open() {
+        return;
+    }
+    async openCallerIdSettings() {
+        return;
     }
 }
 
