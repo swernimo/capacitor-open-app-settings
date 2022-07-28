@@ -9,11 +9,11 @@ import Capacitor
 public class openappsettingsPlugin: CAPPlugin {
     private let implementation = openappsettings()
 
-    @objc func open(_ call: CAPPluginCall) {
+    @objc func open() {
         call.resolve(implementation.open())
     }
 
-    @objc func openCallerIdSettings(_ call: CAPPluginCall) {
+    @objc func openCallerIdSettings() {
         call.resolve(implementation.openCallerIdSettings())
     }
 }

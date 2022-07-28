@@ -7,22 +7,18 @@ public class openappsettings {
     public void open(PluginCall call) {
         Intent intent = new Intent();
         intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        Uri uri = Uri.fromParts("package", getContext().getPackageName(), null);
+        Uri uri = Uri.fromParts("package", BuildConfig.LIBRARY_PACKAGE_NAME, null);
         intent.setData(uri);
         startActivityForResult(call, intent, 1);
-
-        JSObject ret = new JSObject();
-        call.success(ret);
+        call.resolve();
     }
 
     public void openCallerIdSettings(PluginCall call) {
         Intent intent = new Intent();
         intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        Uri uri = Uri.fromParts("package", getContext().getPackageName(), null);
+        Uri uri = Uri.fromParts("package", BuildConfig.LIBRARY_PACKAGE_NAME, null);
         intent.setData(uri);
         startActivityForResult(call, intent, 1);
-
-        JSObject ret = new JSObject();
-        call.success(ret);
+        call.resolve();
     }
 }
