@@ -1,5 +1,9 @@
 package com.theblindsquirrel.opensettingsplugin;
 
+import android.content.Intent;
+import android.net.Uri;
+import android.provider.Settings;
+
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
