@@ -1,3 +1,4 @@
 export interface openappsettingsPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  open(): Promise<void>;
+  openCallerIdSettings(): Promise<void>;
 }
