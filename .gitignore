@@ -92,3 +92,6 @@ iOSInjectionProject/
 
 node_modules
 **/.DS_Store
+android/.idea
+android/.gradle
+android/local.properties
